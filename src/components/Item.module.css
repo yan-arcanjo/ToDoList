@@ -1,0 +1,38 @@
+.boxItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--gray-300);
+    border-radius: 8px;
+    /*max-width: 100%;*/
+    width: 18rem;
+    height: 15rem;
+
+    object-fit: cover;
+
+    
+    padding: 2rem;
+}
+
+.itemSection {
+    width: 100%;
+}
+
+.trash {
+    margin-top: -2.5rem;
+    padding: .5rem;
+}
+
+.trash > button {
+    background: transparent;
+    border: none;
+    color: var(--blue-500);
+    cursor: pointer;
+    transition: color 0.5s, transform 0.3s;
+}
+
+.trash > button:hover{
+    color: red;
+    transform: scale(1.2);
+}

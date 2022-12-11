@@ -1,0 +1,7 @@
+.header {
+    display: flex;
+    justify-content: center;
+    background: var(--blue-500);
+    padding: 1rem;
+    color: var(--white);
+}
