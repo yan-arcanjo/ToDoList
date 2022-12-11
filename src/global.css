@@ -10,7 +10,7 @@
     --white: #fff;
 }
 
-textarea:focus{
+input:focus{
     outline: transparent;
     box-shadow: 0 0 0 2px var(--blue-500) ;
 }

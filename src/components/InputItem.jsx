@@ -14,7 +14,7 @@ export function InputItem () {
         setNewItemText('');
     }
 
-    function handleNewItemChange() {
+    function handleNewItemChange(event) {
         setNewItemText(event.target.value);
     }
 
@@ -22,7 +22,7 @@ export function InputItem () {
         <div>
             <form onSubmit={handleCreateNewItem} className={styles.inputBox}>
                 <div className={styles.addItem}>
-                    <textarea 
+                    <input 
                         name='item'
                         placeholder='Write your task'
                         value={newItemText}
@@ -31,7 +31,9 @@ export function InputItem () {
                     <button type='submit'>Add</button>
                 </div>
              </form>
-
+            <div className={styles.countItem}>
+                <h3>You have {item.length} task(s) on your to do list</h3>
+            </div>
              <div className={styles.wrapper}>
                 <main>
                     {item.map(item => {
