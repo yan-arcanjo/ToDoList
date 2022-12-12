@@ -47,7 +47,7 @@ export function InputItem () {
              <div className={styles.wrapper}>
                 <main>
                     {item.map(item => {
-                        return <Item content={item} deleteItem={deleteItem}/>
+                        return <Item content={item} OnDeleteItem={deleteItem}/>
                     })}
                 </main>
              </div>

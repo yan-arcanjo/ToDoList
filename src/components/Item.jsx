@@ -1,13 +1,13 @@
 import styles from './Item.module.css'
-import {Trash, Check, X} from 'phosphor-react'
+import {Trash, Check, X, ArrowCounterClockwise} from 'phosphor-react'
 import { useState } from 'react'
 
-export function Item ({content, deleteItem}) {
+export function Item ({content, OnDeleteItem}) {
     const [checked, isChecked] = useState(false);
     const [checkedOrNot, isCheckedOrNot] = useState(<Check size={26}/>)
     
     function handleDeleteComment() {
-        deleteItem(content)
+        OnDeleteItem(content)
     }
 
     return (
@@ -18,10 +18,11 @@ export function Item ({content, deleteItem}) {
 
         <div className={styles.options}>
             <div className={styles.trash}>
-                <button onClick={handleDeleteComment}><Trash size={24}/></button> 
+                <button onClick={handleDeleteComment}><Trash size={22}/></button> 
             </div>
 
             <div className={styles.check}>
+                <button><ArrowCounterClockwise color="blue" size={26}/></button>
                 <button onClick={() => {
                     if(checked) {
                         isChecked(false);
