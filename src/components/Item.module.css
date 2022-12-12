@@ -1,4 +1,4 @@
-.boxItem {
+.boxItemGray {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,9 +6,24 @@
     background: var(--gray-300);
     border-radius: 8px;
     /*max-width: 100%;*/
-    width: 18rem;
+    width: 100%;
     height: 15rem;
+    object-fit: cover;
 
+    
+    padding: 2rem;
+}
+
+.boxItemGreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--green-300);
+    border-radius: 8px;
+    /*max-width: 100%;*/
+    width: 100%;
+    height: 15rem;
     object-fit: cover;
 
     
@@ -35,4 +50,27 @@
 .trash > button:hover{
     color: red;
     transform: scale(1.2);
+}
+.options {
+    display: flex;
+    justify-content: space-between;
+}
+.check {
+    margin-top: -2.5rem;
+    padding: .5rem;
+    
+}
+
+.check > button {
+    display: flex;
+    align-self: flex-end;
+    color: var(--green-500);
+    background: transparent;
+    border: none;
+    transition: transform 0.4s;
+}
+
+.check > button:hover {
+    color: var(--green-300);
+    transform: scale(1.3);
 }

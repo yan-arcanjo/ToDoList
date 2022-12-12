@@ -3,16 +3,32 @@
     flex-direction: column;
     justify-content: center;
     height: 6rem;
-    margin: 0 2rem;
+    margin: 0 2.5rem;
 }
 
 .countItem {
     margin: 2.5rem;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     color: var(--gray-600);
     font-size: 1.2rem;
+    
+}
+
+.countItem > button {
+    margin: 0 1rem 0 3.5rem;
+    padding: .5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s, color .4s, border-radius .2s;
+}
+
+.countItem > button:hover{
+    background: red;
+    color: var(--white);
+    border-radius: 5px;
 }
 
 .addItem {
@@ -49,14 +65,15 @@
 }
 
 .wrapper main {
-    display: flex;
-    max-width: 58rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    width: 58rem;
     gap: 2rem;
-    flex-wrap: wrap;
 }
 
 .wrapper {
     display: flex;
     justify-content: center;
-    margin: 3rem;
+    align-items: center;
+    margin: 3rem 2rem;
 }

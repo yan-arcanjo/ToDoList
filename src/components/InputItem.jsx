@@ -18,6 +18,13 @@ export function InputItem () {
         setNewItemText(event.target.value);
     }
 
+    function deleteItem(itemToDelete) {
+        const itemsWithoutDeletedOne = item.filter(item => {
+            return item != itemToDelete
+        })
+        setItem(itemsWithoutDeletedOne);
+    }
+
     return (
         <div>
             <form onSubmit={handleCreateNewItem} className={styles.inputBox}>
@@ -27,17 +34,20 @@ export function InputItem () {
                         placeholder='Write your task'
                         value={newItemText}
                         onChange={handleNewItemChange}
+                        required
                     />
                     <button type='submit'>Add</button>
                 </div>
              </form>
             <div className={styles.countItem}>
                 <h3>You have {item.length} task(s) on your to do list</h3>
+                <button onClick={() => setItem([])}>Delete All Tasks</button>
             </div>
+    
              <div className={styles.wrapper}>
                 <main>
                     {item.map(item => {
-                        return <Item content={item}/>
+                        return <Item content={item} deleteItem={deleteItem}/>
                     })}
                 </main>
              </div>

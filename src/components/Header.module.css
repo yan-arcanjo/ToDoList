@@ -3,5 +3,6 @@
     justify-content: center;
     background: var(--blue-500);
     padding: 1rem;
+    width: 100vw;
     color: var(--white);
 }
