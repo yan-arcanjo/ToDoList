@@ -41,7 +41,7 @@ export function InputItem () {
              </form>
             <div className={styles.countItem}>
                 <h3>You have {item.length} task(s) on your to do list</h3>
-                <button onClick={() => setItem([])}>Delete All Tasks</button>
+                <button disabled={item.length===0} onClick={() => setItem([])}>Delete All Tasks</button>
             </div>
     
              <div className={styles.wrapper}>
