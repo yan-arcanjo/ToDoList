@@ -1,15 +1,13 @@
 import { Header } from "./components/Header"
-import { Item } from "./components/Item"
+import styles from "./App.module.css"
 import './global.css'
 import { InputItem } from "./components/InputItem"
 
 function App() {
   return (
     <div>
-      <Header />
-
-      
-    <div>
+      <Header /> 
+    <div className={styles.wrapper}>
       <main>
         <InputItem />
       </main> 

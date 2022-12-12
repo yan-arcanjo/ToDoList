@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './InputItem.module.css'
+import { PlusCircle } from 'phosphor-react'
 import { Item } from "./Item"
 
 export function InputItem () {
@@ -31,17 +32,19 @@ export function InputItem () {
                 <div className={styles.addItem}>
                     <input 
                         name='item'
-                        placeholder='Write your task'
+                        placeholder='Adicione uma nova tarefa'
                         value={newItemText}
                         onChange={handleNewItemChange}
                         required
                     />
-                    <button type='submit'>Add</button>
+                    <button type='submit'>
+                        Criar 
+                    </button>
                 </div>
              </form>
             <div className={styles.countItem}>
-                <h3>You have {item.length} task(s) on your to do list</h3>
-                <button disabled={item.length===0} onClick={() => setItem([])}>Delete All Tasks</button>
+                <h3>Tarefas criadas <span>{item.length}</span></h3>
+                <h3>Concluidas <span>0 de {item.length}</span></h3>
             </div>
     
              <div className={styles.wrapper}>

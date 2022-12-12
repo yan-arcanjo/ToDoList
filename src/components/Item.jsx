@@ -1,5 +1,5 @@
 import styles from './Item.module.css'
-import {Trash, Check, X, ArrowCounterClockwise} from 'phosphor-react'
+import {Trash, Check, X} from 'phosphor-react'
 import { useState } from 'react'
 
 export function Item ({content, OnDeleteItem}) {
@@ -11,8 +11,8 @@ export function Item ({content, OnDeleteItem}) {
     }
 
     return (
-        <div className='itemSection'>
-            <div className={checked ? styles.boxItemGreen : styles.boxItemGray}>
+        <div>
+            <div className={checked ? styles.boxItemChecked : styles.boxItem}>
                 <h2>{content}</h2> 
             </div>
 
@@ -22,8 +22,7 @@ export function Item ({content, OnDeleteItem}) {
             </div>
 
             <div className={styles.check}>
-                <button><ArrowCounterClockwise color="blue" size={26}/></button>
-                <button onClick={() => {
+                <button className={styles.checkButton} onClick={() => {
                     if(checked) {
                         isChecked(false);
                         isCheckedOrNot(<Check size={26}/>)

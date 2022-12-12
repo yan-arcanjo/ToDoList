@@ -1,20 +1,18 @@
-.boxItemGray {
+.boxItem {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: var(--gray-300);
+    background: var(--gray-200);
     border-radius: 8px;
-    /*max-width: 100%;*/
     width: 100%;
-    height: 15rem;
-    object-fit: cover;
+
 
     
     padding: 2rem;
 }
 
-.boxItemGreen {
+.boxItemChecked {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,16 +21,12 @@
     border-radius: 8px;
     /*max-width: 100%;*/
     width: 100%;
-    height: 15rem;
     object-fit: cover;
 
     
     padding: 2rem;
 }
 
-.itemSection {
-    width: 100%;
-}
 
 .trash {
     margin-top: -2.5rem;
@@ -53,6 +47,7 @@
 }
 .options {
     display: flex;
+   
     justify-content: space-between;
 }
 .check {
@@ -63,7 +58,7 @@
     
 }
 
-.check > button {
+.checkButton {
     display: flex;
     align-self: flex-end;
     color: var(--green-500);
@@ -73,7 +68,8 @@
     cursor: pointer;
 }
 
-.check > button:hover {
+.checkButton:hover {
     color: var(--green-300);
     transform: scale(1.3);
 }
+
