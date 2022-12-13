@@ -8,16 +8,15 @@
     display: flex;
     text-align: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 4rem ;
     justify-content: space-between;
-    color: var(--gray-600);
     font-size: .875rem;
-    color: var(--blue-300);
+    color: var(--blue);
 }
 
 .countItem span {
-    background: var(--gray-200);
-    color: var(--white);
+    background: var(--gray-400);
+    color: var(--gray-200);
     margin-left: 0.5rem;
     padding: 0.125rem 0.5rem;
     font-size: .75rem;
@@ -27,48 +26,63 @@
 
 .addItem {
     display: flex;
-    margin-top: -2rem;
+    margin-top: -1.5rem;
+    height: 3.25rem;
     gap: 1rem;
     justify-content: center;
-    width: 100%;
 }
 
 .addItem > input {
     background: var(--gray-500);
+    color: var(--gray-100);
     flex: 1;
     border: none;
-    height: 4rem;
     border-radius: 8px;
     padding: 1rem;
     line-height: 1.4;
 }
 
 .addItem > button[type='submit'] {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
     border: none;
-    width: 5.625rem;
-    padding: 1.5rem;
-    background: var(--blue-700);
-    color: var(--white);
+    padding: 1rem;
+    background: var(--blue-dark);
+    color: var(--gray-100);
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color .3s, transform .3s;
+    transition: background-color .3s;
+}
+
+.addItem > button[type='submit'] span {
+    margin-left: 0.5rem;
 }
 
 .addItem > button[type='submit']:hover {
-    background: var(--green-300);
-    transform: scale(1.1);
+    background: var(--blue);
 }
 
-.wrapper main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    width: 58rem;
-    gap: 2rem;
-}
-
-.wrapper {
+.wrapper main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    gap: .75rem;
+}
+
+.noTasks {
+    border-top: 1px solid var(--gray-400);
     align-items: center;
-    margin: 3rem 2rem;
+    padding: 4rem 1.5rem;
+    line-height: 1.4;
+}
+
+.noTasks p {
+    margin-top: 1rem;
+    color: var(--gray-300);
+}
+
+.noTasks strong {
+    font-weight: 700;
 }

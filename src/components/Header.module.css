@@ -6,7 +6,7 @@
     align-items: center;
     background: var(--gray-700);
     padding: 4.5rem 0 5rem;
-    color: var(--blue-500);
+    color: var(--purple-dark);
 }
 
 .header h1 {
@@ -15,7 +15,7 @@
 }
 
 .header strong {
-    color: var(--blue-300);
+    color: var(--blue);
 }
 
 
